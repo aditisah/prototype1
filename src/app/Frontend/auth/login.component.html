@@ -1,0 +1,44 @@
+<!-- <p>registration-form works!</p> -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container">
+      <div *ngIf="isLoading" style="text-align: center;">
+        <app-progress-page></app-progress-page>
+      </div>
+      <mat-card  *ngIf="!isLoading">
+        <mat-card-title>Login</mat-card-title>
+        <div class="error" *ngIf='!isValid'>
+          <span style="background-color: pink;color:firebrick;height: 400px;">username or password is not valid!!</span>
+        </div>
+        <mat-card-content>
+          <form class="example-form"
+          #login="ngForm"
+          (ngSubmit)="onLogin(login)">
+            <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input type="email"
+        matInput
+        ngModel
+        name="email">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input type="password"
+          matInput
+          ngModel
+          name="password">
+        </mat-form-field>
+    <div class="example-label"></div>
+    <div class="example-button-row">
+   <button mat-raised-button color="primary">Login</button>
+ </div>
+</div>
+</form>
+</mat-card-content>
+</mat-card>
+ </div>
+  </body>
+</html>

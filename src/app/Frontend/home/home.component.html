@@ -1,0 +1,63 @@
+
+      <!-- <div class="slider">
+          <mat-carousel
+
+          [autoplay]="true"
+          interval="1000"
+          color="accent"
+          maxWidth="auto"
+          proportion="25"
+          slides="5"
+          [loop]="true"
+          [hideArrows]="false"
+          [hideIndicators]="false"
+          [useKeyboard]="true"
+          [useMouseWheel]="false"
+          orientation="ltr"
+
+        >
+          <mat-carousel-slide
+            #matCarouselSlide
+
+            *ngFor="let slide of slides; let i = index"
+            [image]="slide.image"
+            [@slideAnimation]
+
+          >
+        </mat-carousel-slide>
+        </mat-carousel>
+      </div> -->
+
+      <div class="carousel">
+        <ng-container *ngFor="let slide of slides; let i = index">
+          <img
+          *ngIf="i === currentSlide"
+            [src]="slide.image"
+            class="slide"
+            @carouselAnimation
+          />
+        </ng-container>
+
+        <!-- controls -->
+        <button class="control prev" (click)="onPreviousClick()">
+          <span class="arrow left"></span>
+        </button>
+        <button class="control next" (click)="onNextClick()">
+          <span class="arrow right"></span>
+        </button>
+      </div>
+
+    <!-- mat card for ads -->
+    <div class="home">
+
+    <app-ad-banner [ads]="ads"></app-ad-banner>
+
+<!-- <div class="footer"> -->
+
+        <mat-toolbar color="accent">
+                <span class="footerCopyright"><i class="material-icons">
+                    copyright
+                </i>2020,Designed by Aditi</span>
+              </mat-toolbar>
+
+

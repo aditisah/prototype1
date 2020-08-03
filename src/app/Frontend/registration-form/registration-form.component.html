@@ -1,0 +1,51 @@
+<!-- <p>registration-form works!</p> -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <form (ngSubmit)="onFillRegistrationForm(submitData)" #submitData="ngForm">
+      <div class="container">
+        <mat-form-field appearance="fill">
+            <mat-label>College</mat-label>
+            <mat-select ngModel name="college">
+              <mat-option value="Polytechnic Kashipur">Polytechnic Kashipur</mat-option>
+              <mat-option value="Polytechnic Nainital">Polytechnic Nainital</mat-option>
+              <mat-option value="Polytechnic Dwarahat">Polytechnic Dwarahat</mat-option>
+              <mat-option value="Polytechnic Tanakpur">Polytechnic Tanakpur</mat-option>
+            </mat-select>
+          </mat-form-field>
+       <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput
+        ngModel
+        name="name"
+        >
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+          <mat-label>Batch</mat-label>
+          <mat-select ngModel name="batch">
+            <mat-option value="First Year">First Year</mat-option>
+            <mat-option value="Second Year">Second Year</mat-option>
+            <mat-option value="Third Year">Third Year</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Branch</mat-label>
+            <mat-select ngModel name="branch">
+              <mat-option value="Mechanical">Mechanical</mat-option>
+              <mat-option value="Electrical">Electrical</mat-option>
+              <mat-option value="Electronics">Electronics</mat-option>
+              <mat-option value="Information Technology">Information Technology</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br>
+<div class="example-label"></div>
+    <div class="example-button-row">
+   <button mat-raised-button color="primary">Submit</button>
+ </div>
+</div>
+    </form>
+  </body>
+</html>

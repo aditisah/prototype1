@@ -1,0 +1,46 @@
+
+<div class="spinLoader">
+  <app-progress-page *ngIf="isFetching"></app-progress-page>
+</div>
+<div class="search-row">
+    <button mat-raised-button color="accent" (click)="openPDF()">Open PDF</button>
+    <button mat-raised-button color="accent" (click)="downloadPDF()">Download PDF</button>
+    <mat-form-field *ngIf="!isFetching">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="search" #input>
+      </mat-form-field>
+  </div>
+
+  <div class="student-data" #data>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+    <mat-cell *matCellDef="let element; let i='index+1';"> {{i}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="college">
+    <mat-header-cell *matHeaderCellDef> College </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.college}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="batch">
+    <mat-header-cell *matHeaderCellDef> Batch </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.batch}} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="branch">
+    <mat-header-cell *matHeaderCellDef> Branch </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.branch}} </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+</div>

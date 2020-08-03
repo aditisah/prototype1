@@ -1,0 +1,17 @@
+/* .example-h2 {
+  margin: auto;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+} */
+
+div {
+margin: auto;
+height: 1px;
+width: 1px;
+}
+

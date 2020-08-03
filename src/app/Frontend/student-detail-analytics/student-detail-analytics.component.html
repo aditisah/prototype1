@@ -1,0 +1,47 @@
+<!-- <p>student-detail-analytics works!</p>
+<button mat-raised-button (click)="OncountStudentsInEveryCollege()"> College </button>
+<button mat-raised-button> Catagory </button>
+<button mat-raised-button> Total </button>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf=isCollegeButtonClicked>
+    <ng-container matColumnDef="position">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let element; let i='index+1';"> {{i}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="college">
+          <mat-header-cell *matHeaderCellDef> College </mat-header-cell>
+          <mat-cell *matCellDef="let element;"> {{element.collegeName}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="students">
+            <mat-header-cell *matHeaderCellDef> Number Of Students </mat-header-cell>
+            <mat-cell *matCellDef="let element;"> {{element.value}} </mat-cell>
+          </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+
+</table>
+
+ -->
+
+
+
+
+ <button mat-raised-button (click)="OncountStudentsInEveryCollege()"> College </button>
+ <ul class="students head" *ngIf="isCollegeButtonClicked">
+   <li>
+   <div class="inner">
+    <span class="badge">Students</span>
+    <span>College</span>
+ </div>
+ </li>
+</ul>
+<ul class="students">
+  <li *ngFor="let data of data;let i = index" class="student">
+    <div class="inner">
+<span class="badge">{{ data.value }}</span>
+      <span>{{ data.collegeName }}</span>
+      <!-- <span class="badge">{{ data.value }}</span> -->
+    </div>
+  </li>
+</ul>
