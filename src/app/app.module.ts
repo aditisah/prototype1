@@ -37,6 +37,8 @@ import { AdService } from './Frontend/home/ad-banner/ad.service';
 import { DynamicComponentService } from './Frontend/home/ad-banner/dynamic-component.service';
 import { MaterialElevationDirective } from './Frontend/home/material-elevation.directive';
 import {MatChipsModule} from '@angular/material/chips';
+import { ContactComponent } from './Frontend/contact/contact.component';
+
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
  { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
  { path: 'login', component: LoginComponent },
  { path: 'logout', component: LogoutComponent },
  { path: 'students', component: StudentDetailsComponent },
- { path: 'student-detail-analytics', component: StudentDetailAnalyticsComponent}
+ { path: 'student-detail-analytics', component: StudentDetailAnalyticsComponent},
+ { path: 'contact', component: ContactComponent }
 ];
 @NgModule({
    declarations: [
@@ -63,7 +66,8 @@ const appRoutes: Routes = [
       AdBannerComponent,
      AdRegistrationComponent,
      AdResultComponent,
-     MaterialElevationDirective
+     MaterialElevationDirective,
+     ContactComponent
    ],
    imports: [
       BrowserModule,
