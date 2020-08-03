@@ -35,9 +35,9 @@
     <!-- fxShow="true" fxHide.lt-md="true" -->
       <div>
         <button mat-button routerLink="/about-us">About us</button>
-        <!-- *ngIf="isAuthenticated" -->
 
-        <button mat-button [matMenuTriggerFor]="admin">Admin</button>
+
+        <button mat-button [matMenuTriggerFor]="admin" *ngIf="isAuthenticated">Admin</button>
         <mat-menu #admin="matMenu">
             <button mat-menu-item routerLink="/students">Students</button>
             <button mat-menu-item routerLink="/student-detail-analytics">Analytics</button>
