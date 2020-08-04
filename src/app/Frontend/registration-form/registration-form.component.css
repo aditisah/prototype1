@@ -28,4 +28,11 @@ mat-card-title{
 /* ::deep .mat-input-wrapper{
   width:8000px !important;
 } */
-
+.alert{
+  height: 90px;
+  width: 350px;
+  background-color: whitesmoke;
+  margin: auto;
+  text-align: center;
+  border: 1 solid
+}

@@ -5,6 +5,7 @@ import { RegistrationFormService } from './registration-form.service';
 import { from } from 'rxjs';
 import { NgForm } from '@angular/forms';
 import { StudentDetails } from './registration-form.model';
+import { MatDialog } from '@angular/material/dialog';
 //import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-registration-form',
@@ -22,7 +23,7 @@ export class RegistrationFormComponent implements OnInit {
 //   batch : '',
 //   branch : ''
 //  };
-
+Issubmit = false;
 
   constructor( private RegistrationFormServ: RegistrationFormService ) { }
 
@@ -34,7 +35,16 @@ export class RegistrationFormComponent implements OnInit {
   //  this.form.batch = registrationForm.value.batch;
   //  this.form.branch = registrationForm.value.branch;
   //  this.RegistrationFormServ.fillRegistrationForm(this.form.college, this.form.name, this.form.branch, this.form.batch);
+  this.Issubmit = true;
   const value = registrationForm.value;
   this.RegistrationFormServ.fillRegistrationForm(value.college, value.name, value.batch, value.branch);
  }
+//  openDialog() {
+//   this.dialog.open(DialogElementsExampleDialog);
+// }
 }
+// @Component({
+//   selector: 'dialog-elements-example-dialog',
+//   templateUrl: 'registration-alert.html',
+// })
+// export class DialogElementsExampleDialog {}

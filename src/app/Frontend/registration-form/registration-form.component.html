@@ -1,8 +1,11 @@
 <!-- <p>registration-form works!</p> -->
+<div class="alert" *ngIf=Issubmit>
+  <label>You are registered</label>
+</div>
 <!DOCTYPE html>
 <html>
   <body>
-    <form (ngSubmit)="onFillRegistrationForm(submitData)" #submitData="ngForm">
+    <form (ngSubmit)="onFillRegistrationForm(submitData)" #submitData="ngForm" *ngIf=!Issubmit>
       <div class="container">
         <mat-form-field appearance="fill">
             <mat-label>College</mat-label>
