@@ -39,6 +39,7 @@ import { MaterialElevationDirective } from './Frontend/home/material-elevation.d
 import {MatChipsModule} from '@angular/material/chips';
 import { ContactComponent } from './Frontend/contact/contact.component';
 
+
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
  { path: '', redirectTo: 'home', pathMatch: 'full' },
