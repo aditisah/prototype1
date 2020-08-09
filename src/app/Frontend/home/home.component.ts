@@ -36,11 +36,11 @@ export class HomeComponent implements OnInit {
 interval: any;
   constructor(private adServ: AdService) { }
   show = false;
-  slides = [{image : './../../../assets/104978129_109977350762228_3206620973823288027_n (1).jpg'},
-  {image : './../../../assets/kotabag.jpg'},
-  {image : './../../../assets/nainital.jpg'},
-   {image : './../../../assets/polytechnic-college-of-dwarahat_1469042800.jpeg'},
-    {image : './../../../assets/tihri.jpg'}
+  slides = [{image : 'assets/104978129_109977350762228_3206620973823288027_n (1).jpg'},
+  {image : 'assets/kotabag.jpg'},
+  {image : 'assets/nainital.jpg'},
+   {image : 'assets/polytechnic-college-of-dwarahat_1469042800.jpeg'},
+    {image : 'assets/tihri.jpg'}
    ];
    slide = [];
    currentSlide = 0;
