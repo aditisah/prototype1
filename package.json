@@ -76,11 +76,11 @@
     "tslint": "~6.1.0"
   },
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.",
-  "main": "server.js",
+  "main": "app.js",
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "10.x",
-    "npm": "6.x"
+    "node": "10.16.3",
+    "npm": "6.9.0"
   }
 }
