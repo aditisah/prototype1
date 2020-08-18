@@ -1,16 +1,16 @@
-const path = require('path');
+
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
 //const studentSchema = require('./models/registrationFormModel');
-const userRouter = require('./routes/userRoutes');
-const registrationFormRouter = require('./routes/registrationFormRoutes');
-const adRouter = require('./routes/adRoutes');
+const userRouter = require('./src/backend/routes/userRoutes');
+const registrationFormRouter = require('./src/backend/routes/registrationFormRoutes');
+const adRouter = require('./src/backend/routes/adRoutes');
 //dotenv.config({path: './config.env'});
 
-dotenv.config({path: './config.env'});
+dotenv.config({path: './src/backend/config.env'});
 
 const app = express();
 //MIDDLEWARES
