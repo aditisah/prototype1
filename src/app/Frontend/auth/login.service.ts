@@ -23,7 +23,7 @@ export class LoginService {
   user = new Subject <User>();
   constructor(private http: HttpClient, private router: Router) { }
   login(email: string, password: string){
-    return this.http.post<AuthResponseData>('/users/login', {
+    return this.http.post<AuthResponseData>(`${this.URL}/users/login`, {
       email: email,
       password: password,
       returnSecureToken: true
