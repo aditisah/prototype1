@@ -7,7 +7,7 @@ import { StudentDetails } from './registration-form.model';
   providedIn: 'root'
 })
 export class RegistrationFormService {
-   URL = 'http://localhost:3000/api/v1';
+   URL = '/api/v1/registration';
   constructor(private http: HttpClient) { }
   // FillRegistrationForm(fillDetail){
   //   return this.http.post('')
@@ -21,7 +21,7 @@ export class RegistrationFormService {
                                            batch,
                                           branch };
 
-    this.http.post(`${this.URL}/registration`, submitDetails)
+    this.http.post(this.URL, submitDetails)
     .subscribe(responseData => {
       console.log(responseData);
     });
