@@ -27,7 +27,7 @@ export class RegistrationFormService {
     });
 }
 showStudentDetails(){
-  return this.http.get(`${this.URL}/registration`)
+  return this.http.get(`this.URL/registration`)
  .pipe(
    map(responseData => {
      const studentDetailsArray: StudentDetails[] = [];
