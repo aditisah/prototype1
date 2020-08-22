@@ -2,7 +2,7 @@
 //const path = require('path');
 const express = require('express');
 const app = require('./app');
-app.use(express.static(__dirname +'/dist'));
+app.use(express.static(__dirname +'/dist/polytechnic-web'));
 const port = process.env.PORT||3000;
 app.listen(port,()=>{
   console.log("server is listening....");
