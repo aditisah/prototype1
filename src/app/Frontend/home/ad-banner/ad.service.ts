@@ -11,10 +11,10 @@ import { AdResultComponent } from './ad-result.component';
 @Injectable()
 export class AdService {
 
-  URL = 'http://localhost:3000/api/v1';
+  URL = '/api/v1/ads';
   constructor(private http: HttpClient, private router: Router) { }
 showAds(){
-  return this.http.get(`${this.URL}/ads`)
+  return this.http.get(`${this.URL}`)
   .pipe(
     map(responseData => {
       const ads: Ad[] = [];
