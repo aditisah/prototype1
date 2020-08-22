@@ -19,11 +19,11 @@ export interface AuthResponseData {
   providedIn: 'root'
 })
 export class LoginService {
-  URL = 'http://localhost:3000/api/v1';
+  URL = '/api/v1/users/login';
   user = new Subject <User>();
   constructor(private http: HttpClient, private router: Router) { }
   login(email: string, password: string){
-    return this.http.post<AuthResponseData>(`${this.URL}/users/login`, {
+    return this.http.post<AuthResponseData>(this.URL, {
       email: email,
       password: password,
       returnSecureToken: true
