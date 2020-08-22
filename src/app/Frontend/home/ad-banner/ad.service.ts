@@ -14,7 +14,7 @@ export class AdService {
   URL = '/api/v1/ads';
   constructor(private http: HttpClient, private router: Router) { }
 showAds(){
-  return this.http.get(`${this.URL}`)
+  return this.http.get(this.URL)
   .pipe(
     map(responseData => {
       const ads: Ad[] = [];
