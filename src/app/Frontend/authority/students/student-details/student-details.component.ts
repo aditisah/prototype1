@@ -82,7 +82,7 @@ export class StudentDetailsComponent implements OnInit {
        //this.isFetching = false;
 
          this.dataSource.data = detail;
-         console.log(this.dataSource);
+         //console.log(this.dataSource);
          this.isFetching = false;
 });
     }

@@ -23,7 +23,7 @@ export class RegistrationFormService {
 
     this.http.post(this.URL, submitDetails)
     .subscribe(responseData => {
-      console.log(responseData);
+      //console.log(responseData);
     });
 }
 showStudentDetails(){
